@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,27 +15,32 @@ Route::get('/about', function () {
     return view('about',['title' => "Ini halaman about yaa"]);
 });
 
+// ======= INI ADALAH CONTOH ROUTE DENGAN MENGGUNAKAN ARRAY =======
+// Route::get('/blog', function () {
+//     $posts = [
+//         [
+//             'id' => 1,
+//             'title' => 'Judul Artikel 1',
+//             'author' => 'Reyhan Maulana',
+//             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+//         ],
+//         [
+//             'id' => 2,
+//             'title' => 'Judul Artikel 2',
+//             'author' => 'Nadira Aulia Haq',
+//             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+//         ]
+//     ];
+
+//     return view('blog', [
+//         'title' => 'ini adalah bagian Blog',
+//         'posts' => $posts
+//     ]);
+// });
 
 Route::get('/blog', function () {
-    $posts = [
-        [
-            'id' => 1,
-            'title' => 'Judul Artikel 1',
-            'author' => 'Reyhan Maulana',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
-        ],
-        [
-            'id' => 2,
-            'title' => 'Judul Artikel 2',
-            'author' => 'Nadira Aulia Haq',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
-        ]
-    ];
-
-    return view('blog', [
-        'title' => 'ini adalah bagian Blog',
-        'posts' => $posts
-    ]);
+    $posts = Blog::all();
+    return view('blog', compact('posts'));
 });
 
 
@@ -43,6 +49,7 @@ Route::get('/about', function () {
     return view('about',['title' => "Ini halaman about yaa"]);
 });
 
+// ======= INI ADALAH CONTOH ROUTE DENGAN MENGGUNAKAN ARRAY =======
 Route::get('/post/{id}', function ($id) {
     $posts = [
         [

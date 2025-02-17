@@ -6,8 +6,9 @@
         <div class="flex-1 gap-3">
             <a href="/">Home</a>
             <a href="/about">About</a>
-            <a href="/blog">Blog</a>
+            
             <a href="">Login</a>
+            <a href="/blog">Blog</a>
         </div>
         <div class="flex-none">
           <div class="dropdown dropdown-end">
