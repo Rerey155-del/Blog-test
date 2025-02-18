@@ -8,7 +8,7 @@
 <body>
     <h1>{{ $blog->title }}</h1>
     <p><strong>Author:</strong> {{ $blog->author }}</p>
-    <p>{{ $blog->body }}</p>
+    <p>{{ $blog->content }}</p>
     <a href="{{ url('/blog') }}">Kembali</a>
 </body>
 </html>
