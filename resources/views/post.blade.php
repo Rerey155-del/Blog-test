@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title }}</title>
+    <title>{{ $blog->title }}</title>
 </head>
 <body>
-    <h1>{{ $post['title'] }}</h1>
-    <p><strong>Author:</strong> {{ $post['author'] }}</p>
-    <p>{{ $post['body'] }}</p>
+    <h1>{{ $blog->title }}</h1>
+    <p><strong>Author:</strong> {{ $blog->author }}</p>
+    <p>{{ $blog->body }}</p>
     <a href="{{ url('/blog') }}">Kembali</a>
 </body>
 </html>

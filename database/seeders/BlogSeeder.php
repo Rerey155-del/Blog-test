@@ -24,5 +24,11 @@ class BlogSeeder extends Seeder
             'author' => 'Nadira Aulia Haq',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
         ]);
+
+        Blog::create([
+            'title' => 'Judul Artikel 2',
+            'author' => 'Nadira Aulia Haq',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+        ]);
     }
 }
