@@ -2,6 +2,9 @@
 
 use App\Models\Blog;
 use App\Models\Post;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 
@@ -12,9 +15,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about', ['title' => "Ini halaman about yaa"]);
-});
+
 
 // ======= INI ADALAH CONTOH ROUTE DENGAN MENGGUNAKAN ARRAY ( Data Dummy ) =======
 // Route::get('/blog', function () {
@@ -43,6 +44,12 @@ Route::get('/about', function () {
 Route::get('/blog', function () {
     $blogs = Blog::all();  // Mengambil semua data blog
     return view('blog', compact('blogs'));
+});
+// ========= Route untuk menampilkan about dari ========
+Route::get('/about', function () {
+    return view('about', [
+        'title' => "Ini halaman about yaa",
+    ]);
 });
 
 
@@ -86,9 +93,5 @@ Route::get('/blog/{id}', function ($id) {
         abort(404, 'Blog tidak ditemukan');
     }
 
-    return view('post', compact('blog'));  // Ganti 'blog' menjadi 'post'
+    return view('post', compact('blog'));
 });
-
-
-
-
