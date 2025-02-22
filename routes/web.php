@@ -2,11 +2,13 @@
 
 use App\Models\Blog;
 use App\Models\Post;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+
 
 Route::get('/', function () {
     return view('welcome', [
@@ -95,3 +97,6 @@ Route::get('/blog/{id}', function ($id) {
 
     return view('post', compact('blog'));
 });
+
+
+
