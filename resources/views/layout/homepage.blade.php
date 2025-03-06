@@ -21,7 +21,7 @@
                     Kelolainaja adalah platform digital yang menyediakan layanan pengelolaan media sosial dan desain untuk UMKM dan jasa lainnya.
                 </p>
                 <button class="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition">
-                    Temukan selengkapnya
+                    Temukan selengkapnyaaaaaa
                 </button>
             </div>
             <div>
