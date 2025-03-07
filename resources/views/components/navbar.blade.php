@@ -1,4 +1,4 @@
-<nav class="bg-gray-800 p-4">
+<nav class="bg-transparant p-4">
   <div class="container mx-auto flex justify-between items-center">
       <a href="{{ url('/') }}" class="text-white text-lg font-bold">MyWebsite</a>
       <ul class="flex space-x-4">
