@@ -28,42 +28,6 @@
                         class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
                         Find Out More
                     </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
-                    <button
-                        class="bg-red-500 text-white p-5 rounded-lg font-bold hover:bg-red-600 transition w-[15rem]">
-                        Find Out More
-                    </button>
                 </div>
                 <div>
                     <img src="https://dashboard.codeparrot.ai/api/image/Z8gJ2bwkNXOiaV6T/illus.png"
@@ -71,7 +35,75 @@
                 </div>
             </div>
         </main>
+        <div class="h-[40rem] w-full bg-[#FF4655]  p-20">
+            <div class="text-center text-white mb-12">
+                <h1 class="Font-extrabold text-2xl">Layanan Kami</h1>
+                <p>Bisnis Sukses Kelola Tanpa Stress</p>
+            </div>
+            <div class="flex justify-center gap-12">
+                <div class="card bg-white w-[25rem] shadow-xl">
+                    <figure class="p-3">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body ">
+                        <h2 class="card-title text-black">Manajemen Media Sosial</h2>
+                        <p>Mengelola konten, jadwal posting, dan analisis performa media sosial untuk meningkatkan
+                            interaksi dan brand awareness bisnis Anda</p>
+
+                    </div>
+                </div>
+                <div class="card bg-white w-[25rem] shadow-xl">
+                    <figure class="p-3">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body ">
+                        <h2 class="card-title text-black">Layanan Desain</h2>
+                        <p>Menyediakan desain logo, konten media sosial, dan materi promosi untuk membangun identitas
+                            visual yang kuat dan menarik.</p>
+
+                    </div>
+                </div>
+                <div class="card bg-white w-[25rem] shadow-xl">
+                    <figure class="p-3">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body ">
+                        <h2 class="card-title text-black">Manajemen Media Sosial</h2>
+                        <p>Mengelola konten, jadwal posting, dan analisis performa media sosial untuk meningkatkan
+                            interaksi dan brand awareness bisnis Anda</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 p-20 justify-center items-center">
+            <div><img src="/img/Avatar2.png" alt="" class="w-[30rem] h-[30rem] object-cover"></div>
+            <div>
+                <div class="mb-6 text-black">
+                    <h1 class="Font-extrabold text-2xl">Keunggulan Kami</h1>
+                    <p>Tingkatkan kehadiran bisnis anda dengan layanan unggulan kami</p>
+                </div>
+                <div class="grid gap-8">
+                    <div class="card w-100 bg-base-100 card-xs shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title">One-Stop Solution</h2>
+                            <p>Semua layanan pengelolaan digital dan desain di satu tempat.</p>
+                        </div>
+                    </div>
+                    <div class="card w-100 bg-base-100 card-xs shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title">Harga Terjangkau</h2>
+                            <p>Layanan berkualitas dengan harga yang ramah untuk bisnis kecil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 <script src="{{ mix('js/app.jsx') }}"></script>
+
 </html>
