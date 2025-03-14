@@ -14,13 +14,17 @@ class VideoController extends Controller
         return view('layout.homepage', compact('videos')); // Kirim ke Blade
     }
 
+    // ======================  MENGUNGGAH FOTO ========================
+    public function foto(Request $request)
+    {
+    }
 
     // ======================   MENGUNGGAH VIDEO  =======================
     public function store(Request $request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'video' => 'required|mimes:mp4,mov,avi,wmv|max:50000', // Maks 50MB
+            'video' => 'required|mimes:mp4,mov,avi,wmv|max:204800', // Maks 50MB
         ]);
 
         // Simpan video ke storage

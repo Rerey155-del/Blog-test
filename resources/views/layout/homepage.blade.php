@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>He</title>
+    <title>KelolainAja</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Laravel + DaisyUI</title>
     @vite('resources/css/app.css')
 </head>
 
@@ -36,15 +35,15 @@
             </div>
         </main>
         <div class="h-[40rem] w-full bg-[#FF4655]  p-20">
-            <div class="text-center text-white mb-12">
+            <div class="text-center text-white mb-8">
                 <h1 class="Font-extrabold text-2xl">Layanan Kami</h1>
                 <p>Bisnis Sukses Kelola Tanpa Stress</p>
             </div>
-            <div class="flex justify-center gap-12">
+            <div class="flex justify-center gap-12 px-12">
                 <div class="card bg-white w-[25rem] shadow-xl">
                     <figure class="p-3">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" class="rounded-xl" />
+                        <img src="/img/foto1.png"
+                            alt="Shoes" class="rounded-xl w-[21rem]" />
                     </figure>
                     <div class="card-body ">
                         <h2 class="card-title text-black">Manajemen Media Sosial</h2>
@@ -55,8 +54,8 @@
                 </div>
                 <div class="card bg-white w-[25rem] shadow-xl">
                     <figure class="p-3">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" class="rounded-xl" />
+                        <img src="/img/foto2.png"
+                            alt="Shoes" class="rounded-xl w-[21rem]" />
                     </figure>
                     <div class="card-body ">
                         <h2 class="card-title text-black">Layanan Desain</h2>
@@ -67,8 +66,8 @@
                 </div>
                 <div class="card bg-white w-[25rem] shadow-xl">
                     <figure class="p-3">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" class="rounded-xl" />
+                        <img src="/img/foto3.png"
+                            alt="Shoes" class="rounded-xl w-[21rem]" />
                     </figure>
                     <div class="card-body ">
                         <h2 class="card-title text-black">Manajemen Media Sosial</h2>
@@ -105,17 +104,23 @@
         <div class="w-full  bg-[#FF4654] p-14">
             <h1 class="text-center text-2xl text-white font-bold mb-6">Pilihan portofolio yang telah bekerja sama dengan
                 Kami</h1>
-            <div class="grid crid-cols-4 gap-8">
+            <div class="grid grid-cols-4 gap-8">
                 @foreach ($videos as $video)
-                <div class="bg-white shadow-lg rounded-lg p-4">
-                    <h3 class="font-semibold text-lg">{{ $video->title }}</h3>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            @endforeach
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
+                        <video width="320" height="240" controls class="rounded-lg">
+                            <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                @endforeach
             </div>
+            <div class="text-center mt-6">
+                <button class="btn btn-white">Selengkapnya</button>
+            </div>
+        </div>
+        <div class="w-full  bg-white p-14">
+
         </div>
     </section>
 </body>

@@ -8,10 +8,10 @@ Route::get('/', [VideoController::class, 'index']);
 
 
 // Route untuk form upload video (GET)
-Route::get('/upload-video', function () {
+Route::get('/upload', function () {
     return view('upload');
 });
 
 // Route untuk upload video (POST)
-Route::post('/upload-video', [VideoController::class, 'store']);
+Route::post('/upload', [VideoController::class, 'store']);
 
