@@ -1,15 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VideoController;
 
 // Route untuk homepage
-Route::get('/', function () {
-    return view('layout.homepage');
+Route::get('/', [VideoController::class, 'index']);
+
+
+// Route untuk form upload video (GET)
+Route::get('/upload-video', function () {
+    return view('upload');
 });
 
-// Route untuk halaman login (misalnya ada di views/auth/login.blade.php)
-Route::get('/login', function () {
-    return view('auth.login');
-});
-
+// Route untuk upload video (POST)
+Route::post('/upload-video', [VideoController::class, 'store']);
 

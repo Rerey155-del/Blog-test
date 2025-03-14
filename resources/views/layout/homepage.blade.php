@@ -102,6 +102,21 @@
                 </div>
             </div>
         </div>
+        <div class="w-full  bg-[#FF4654] p-14">
+            <h1 class="text-center text-2xl text-white font-bold mb-6">Pilihan portofolio yang telah bekerja sama dengan
+                Kami</h1>
+            <div class="grid crid-cols-4 gap-8">
+                @foreach ($videos as $video)
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <h3 class="font-semibold text-lg">{{ $video->title }}</h3>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            @endforeach
+            </div>
+        </div>
     </section>
 </body>
 <script src="{{ mix('js/app.jsx') }}"></script>
