@@ -41,7 +41,7 @@
                 <h1 class="card-title text-2xl font-bold">Layanan Kami</h1>
                 <p class="text-lg">Bisnis Sukses Kelola Tanpa Stress</p>
             </div>
-            
+
             <div data-aos="fade-up" class="flex justify-center gap-12 px-12">
                 <div class="card bg-white w-[25rem] shadow-xl">
                     <figure class="p-3">
@@ -79,7 +79,8 @@
             </div>
         </div>
         <div class="grid grid-cols-2 p-20 justify-center items-center">
-            <div><img src="/img/Avatar2.png" data-aos="zoom-in-right" alt="" class="w-[30rem] h-[30rem] object-cover"></div>
+            <div><img src="/img/Avatar2.png" data-aos="zoom-in-right" alt=""
+                    class="w-[30rem] h-[30rem] object-cover"></div>
             <div>
                 <div class="mb-6 text-black">
                     <h1 class="card-title">Keunggulan Kami</h1>
@@ -345,7 +346,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card w-100 bg-white card-xs shadow-xl" >
+                        <div class="card w-100 bg-white card-xs shadow-xl">
                             <div class="card-body flex flex-row items-center gap-4">
                                 <div>
                                     <img src="/img/mobil.png" class="w-[3rem] h-[3rem]">
@@ -358,7 +359,8 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="zoom-in-left"><img src="/img/amico.png" alt="" class="w-auto object-cover"></div>
+                <div data-aos="zoom-in-left"><img src="/img/amico.png" alt="" class="w-auto object-cover">
+                </div>
             </div>
         </div>
 
