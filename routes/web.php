@@ -12,6 +12,17 @@ Route::get('/upload', function () {
     return view('upload');
 });
 
+Route::get('/login', function () {
+    return view('layout.login');
+});
+
+Route::get('/register', function () {
+    return view('layout.resgistration');
+});
+
+
+
+
 // Route untuk upload video (POST)
 Route::post('/upload', [VideoController::class, 'store']);
 
