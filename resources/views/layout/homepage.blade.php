@@ -296,7 +296,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container mx-auto grid grid-cols-3 gap-4 mb-12">
+            <div class="container mx-auto grid grid-cols-3 gap-4 mb-12 px-14">
                 <div class="flex justify-center">
                     <button
                         class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg hover:bg-red-600 transition">
