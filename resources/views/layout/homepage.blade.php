@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-2 p-20 justify-center items-center">
+        <div class="container mx-auto grid grid-cols-2 p-20 justify-center items-center">
             <div><img src="/img/Avatar2.png" data-aos="zoom-in-right" alt=""
                     class="w-[30rem] h-[30rem] object-cover"></div>
             <div>
@@ -129,16 +129,18 @@
         <div class="w-full  bg-[#FF4654] p-14">
             <h1 class="text-center text-2xl text-white font-bold mb-6">Pilihan portofolio yang telah bekerja sama dengan
                 Kami</h1>
-            <div class="grid grid-cols-4 gap-8" data-aos="zoom-in-up">
-                @foreach ($videos as $video)
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
-                        <video width="320" height="240" controls class="rounded-lg">
-                            <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                @endforeach
+            <div class="container mx-auto">
+                <div class=" grid grid-cols-4 gap-8" data-aos="zoom-in-up">
+                    @foreach ($videos as $video)
+                        <div class="bg-white shadow-lg rounded-lg p-4">
+                            {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
+                            <video width="320" height="240" controls class="rounded-lg">
+                                <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    @endforeach
+                </div>
             </div>
             <div class="text-center mt-6">
                 <button class="btn btn-white">Selengkapnya</button>
@@ -319,7 +321,7 @@
         <div class="bg-[#FF4655]">
             <div class="container mx-auto grid grid-cols-2 text-black p-20 gap-[12rem] justify-center  items-center">
                 <div>
-                    <div class="mb-6 text-black">
+                    <div class="mb-6 text-white">
                         <h1 class="card-title text-xl">Alur Pemesanan</h1>
                         <p class="text-lg">Berikut adalah alur pemesanan yang dapat digunakan untuk Kelolain Aja :</p>
                     </div>
