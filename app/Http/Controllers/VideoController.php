@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class VideoController extends Controller
 {
     // ================= MENAMPILKAN VIDEO ====================
-    public function index()
+    public function video()
     {
         $videos = Video::all(); // Ambil semua data dari tabel videos
         return view('layout.homepage', compact('videos')); // Kirim ke Blade
