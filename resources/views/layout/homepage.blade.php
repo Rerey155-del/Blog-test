@@ -142,9 +142,6 @@
                     @endforeach
                 </div>
             </div>
-            <div class="text-center mt-6">
-                <button class="btn btn-white">Selengkapnya</button>
-            </div>
         </div>
         <div class="w-full container mx-auto bg-white pb-4">
             <div class="text-center text-black text-lg pt-12">
