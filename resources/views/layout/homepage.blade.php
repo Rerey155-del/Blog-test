@@ -36,7 +36,7 @@
                 </div>
             </div>
         </main>
-        <div class="h-[40rem] w-full bg-[#FF4655]  p-20">
+        <div class="h-[40rem] w-full bg-[rgb(255,70,85)]  p-20">
             <div class="text-center text-white mb-8 flex flex-col items-center">
                 <h1 class="card-title text-2xl font-bold">Layanan Kami</h1>
                 <p class="text-lg">Bisnis Sukses Kelola Tanpa Stress</p>

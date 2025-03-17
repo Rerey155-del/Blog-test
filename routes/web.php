@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegistController;
 
 // Route untuk homepage
 Route::get('/', [VideoController::class, 'video']);
@@ -23,4 +24,10 @@ Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route untuk upload video
-Route::post('/upload', [VideoController::class, 'store']);
+Route::get('/register', function () {
+    return view('auth.registration');
+})->name('register');
+
+Route::post('/register', [RegistController::class, 'register'])->name('register.post');
+
+
