@@ -8,6 +8,7 @@
     <title>Register</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     @vite('resources/css/app.css')
 </head>
 
@@ -15,9 +16,7 @@
     <div class="min-h-screen flex items-center justify-between bg-white px-10">
         <!-- Form Section -->
         <div class="w-full md:w-1/2 flex justify-center">
-            @if (session('success'))
-                <div class="alert alert-success">{{ session('success') }}</div>
-            @endif
+
             <form data-aos="zoom-in-right" action="{{ route('register.post') }}" method="POST"
                 class="w-96 flex flex-col justify-center items-center">
                 @csrf
@@ -60,8 +59,20 @@
     </div>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     AOS.init();
+
+    @if (session('success'))
+        Swal.fire({
+            title: "Registrasi Berhasil!",
+            text: "Anda akan diarahkan ke halaman login.",
+            icon: "success",
+            confirmButtonText: "OK"
+        }).then(() => {
+            window.location.href = "{{ route('login') }}";
+        });
+    @endif
 </script>
 
 </html>

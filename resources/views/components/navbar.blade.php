@@ -8,6 +8,7 @@
         <li><a>Keunggulan</a></li>
         <li><a>Alur Pemesanan</a></li>
       </ul>
+      
       <a href="{{ route('login') }}" class="btn bg-[#FF4654] text-white border-[#FF4654]">
         Login
     </a>

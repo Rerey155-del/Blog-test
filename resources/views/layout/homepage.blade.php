@@ -31,7 +31,7 @@
                     </button>
                 </div>
                 <div>
-                    <img src="https://dashboard.codeparrot.ai/api/image/Z8gJ2bwkNXOiaV6T/illus.png"
+                    <img src="/img/Avatar1.png"
                         alt="Kelolainaja Illustration" class="w-[648px] h-[594px] object-contain">
                 </div>
             </div>
