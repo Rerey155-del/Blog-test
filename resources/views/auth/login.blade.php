@@ -26,7 +26,7 @@
             <button type="submit" class="w-full h-14 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 transition mb-5">Login</button>
             <a href="#" class="pb-12">Forgot Password?</a>
 
-            <a href="#">Create your account</a>
+            <a href="/register">Create your account</a>
             @if ($errors->any())
                 <div class="text-red-500 text-sm mt-2">
                     @foreach ($errors->all() as $error)

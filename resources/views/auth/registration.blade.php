@@ -39,8 +39,7 @@
 
                 <button type="submit"
                     class="w-full h-14 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 transition mb-5">Daftarkan</button>
-                <a href="#" class="pb-4 text-gray-500">Forgot Password?</a>
-                <a href="#" class="text-gray-500">Create your account</a>
+               
 
                 @if ($errors->any())
                     <div class="text-red-500 text-sm mt-2">
