@@ -11,7 +11,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-poppins antialiased">
     <section class="bg-white">
         <x-navbar></x-navbar>
         <main class="max-w-6xl mx-auto px-10 py-10">
@@ -37,7 +37,7 @@
             </div>
         </main>
         <div class="h-[40rem] w-full bg-[rgb(255,70,85)]  p-20">
-            <div class="text-center text-white mb-8 flex flex-col items-center">
+            <div class="text-center #layanan text-white mb-8 flex flex-col items-center">
                 <h1 class="card-title text-2xl font-bold">Layanan Kami</h1>
                 <p class="text-lg">Bisnis Sukses Kelola Tanpa Stress</p>
             </div>
@@ -146,168 +146,30 @@
         <div class="w-full container mx-auto bg-white pb-4">
             <div class="text-center text-black text-lg pt-12">
                 <h2>Price List Package - Kelolainaja</h2>
-                <h1 class="font-bold">Paket Mana yan Sesuai dengan Kebutuhan Anda?</h1>
+                <h1 class="font-bold">Paket Mana yang Sesuai dengan Kebutuhan Anda?</h1>
             </div>
             <div class=" grid grid-cols-3 gap-12 p-14">
-                {{-- card 1 --}}
-                <div class="card w-96 bg-black shadow-sm">
-                    <div class="card-body">
-                        <div class="flex justify-between">
-                            <h2 class="text-3xl font-bold text-[#FF4655]">Package <br> Content Creator</h2>
-                        </div>
-                        <ul class="mt-6 flex flex-col gap-4 text-md text-white list-disc list-inside">
-                            <li>
-                                <span class="font-bold text-2xl">Foto</span>
-                                <ul class="ml-5 mt-2">
-                                    <li class="flex justify-between w-64">
-                                        <span>1-5 Foto</span> <span>32k/Design</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>6-10 Foto</span> <span>36k/Design</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>10+ Foto</span> <span>40k/Design</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-bold text-2xl">Video</span>
-                                <ul class="ml-5 mt-2">
-                                    <li class="flex justify-between w-64">
-                                        <span>15-30 Detik</span> <span>50k/Video</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>60 Detik</span> <span>75k/Video</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>90 Detik</span> <span>95k/Video</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="font">
-                                <span class="font-bold text-2xl">Caption</span>
-                                <ul class="ml-5 mt-2">
-                                    <li class="flex justify-between w-64">
-                                        <span>1-3 Posts</span> <span>10k/Posting</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>4-5 Posts</span> <span>15k/Posting</span>
-                                    </li>
-                                    <li class="flex justify-between w-64">
-                                        <span>5+ Posts</span> <span>17k/Posting</span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                {{-- card 2 --}}
-                <div class="card w-96 bg-[#FF4655] shadow-xl">
-                    <div class="card-body">
-                        <div class="flex justify-between">
-                            <h2 class="text-3xl font-bold text-white">Package<br>Standart</h2>
-                        </div>
-                        <ul class="mt-4 flex flex-col text-white gap-4 text-md list-disc list-inside">
-                            <li>
-
-                                <span class="font-semibold text-xl">Essentials Pack</span> <span
-                                    class="float-right font-semibold text-xl">(550rb)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>8 Feeds (Foto)</li>
-                                    <li>3 Reels (Maks. 30 Detik)</li>
-                                    <li>4 Stories (Foto)</li>
-                                    <li>1 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-xl">Boost Pack</span> <span
-                                    class="float-right font-semibold text-xl">(999rb)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>14 Feeds (Foto)</li>
-                                    <li>6 Reels (Maks. 30 Detik)</li>
-                                    <li>4 Stories (Foto)</li>
-                                    <li>2 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-xl">Premium Pack</span> <span
-                                    class="float-right font-semibold text-xl">(1.5jt)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>16 Feeds (Foto)</li>
-                                    <li>8 Reels (Maks. 30 Detik)</li>
-                                    <li>6 Stories (Foto)</li>
-                                    <li>1 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                {{-- card 3 --}}
-                <div class="card w-96 bg-black shadow-xl">
-                    <div class="card-body">
-                        <div class="flex justify-between">
-                            <h2 class="text-3xl font-bold text-[#FF4655]">Package <br>
-                                Costum (by Request)</h2>
-                        </div>
-                        <ul class="mt-4 flex flex-col text-white gap-4 text-md list-disc list-inside">
-                            <li>
-
-                                <span class="font-semibold text-xl">Costum 1</span> <span
-                                    class="float-right font-semibold text-xl">(600rb)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>8 Feeds (Foto)</li>
-                                    <li>3 Reels (Maks. 30 Detik)</li>
-                                    <li>4 Stories (Foto)</li>
-                                    <li>1 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-xl">Costum 2</span> <span
-                                    class="float-right font-semibold text-xl">(1.1 jt)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>14 Feeds (Foto)</li>
-                                    <li>6 Reels (Maks. 30 Detik)</li>
-                                    <li>4 Stories (Foto)</li>
-                                    <li>2 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-xl">Costum 3</span> <span
-                                    class="float-right font-semibold text-xl">(1.7jt)</span>
-                                <ul class="ml-5 mt-1 text-md space-y-1">
-                                    <li>Kalender Konten</li>
-                                    <li>16 Feeds (Foto)</li>
-                                    <li>8 Reels (Maks. 30 Detik)</li>
-                                    <li>6 Stories (Foto)</li>
-                                    <li>1 Platform Media Sosial (Opsional)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                {{-- cards --}}
+                <x-package1></x-package1>
+                <x-package2></x-package2>
+                <x-package3></x-package3>
+                
             </div>
             <div class="container mx-auto grid grid-cols-3 gap-4 mb-12 px-14">
                 <div class="flex justify-center">
-                    <button
+                    <button onclick="window.location.href='/package1'"
                         class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg hover:bg-red-600 transition">
                         Pesan Sekarang
                     </button>
                 </div>
                 <div class="flex justify-center">
-                    <button
+                    <button onclick="window.location.href='/package2'"
                         class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg   hover:bg-red-600 transition">
                         Pesan Sekarang
                     </button>
                 </div>
                 <div class="flex justify-center">
-                    <button
+                    <button onclick="window.location.href='/package3'"
                         class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg hover:bg-red-600 transition">
                         Pesan Sekarang
                     </button>

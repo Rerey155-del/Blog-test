@@ -18,6 +18,19 @@ Route::get('/register', function () {
     return view('layout.registration');
 });
 
+Route::get('/package1', function(){
+    return view('layout.package1page');
+});
+
+Route::get('/package2', function(){
+    return view('layout.package2page');
+});
+
+Route::get('/package3', function(){
+    return view('layout.package3page');
+});
+
+
 // Route untuk login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/auth/login', [LoginController::class, 'login']);

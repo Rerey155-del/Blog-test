@@ -1,4 +1,4 @@
-<footer class="footer sm:footer-horizontal bg-white text-black p-10 flex flex-col-3 justify-around ">
+<footer class="container mx-auto footer sm:footer-horizontal bg-white text-black p-10 flex flex-col-3 justify-around ">
     <aside>
         <img src="/img/Kelolain.png" width="150" height="150"  alt="" class="pb-4">
         <p>
@@ -9,7 +9,7 @@
     </aside>
     <div class="flex justify-end gap-12">
         <nav class="flex flex-col">
-            <h6 class="footer-title">Company</h6>
+            <h6 class="footer-title" id="">Company</h6>
             <a class="link link-hover">About us</a>
             <a class="link link-hover">Contact</a>
             <a class="link link-hover">Pricing</a>
