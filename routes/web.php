@@ -29,6 +29,9 @@ Route::get('/package2', function(){
 Route::get('/package3', function(){
     return view('layout.package3page');
 });
+Route::get('/admin', function(){
+    return view('admin.dashboard');
+});
 
 
 // Route untuk login
