@@ -8,10 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+   
 
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
+    @vite('resources/css/app.css')
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -145,12 +147,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
+           
 
         </ul>
         <!-- End of Sidebar -->
@@ -331,12 +328,21 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
+                            <div class="dropdown dropdown-end">
+                                <label tabindex="0" class="btn bg-[#FF4654] text-white border-[#FF4654]">
+                                    {{ Auth::user()->name }}
+                                </label>
+                                <ul tabindex="0"
+                                    class="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52 mt-2">
+                                 
+                                    <li><a href="{{ route('dashboard') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                        @csrf
+                                    </form>
+                                </ul>
+                            </div>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -741,21 +747,22 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for all pages -->
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+<!-- Page level plugins -->
+<script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+<!-- Page level custom scripts -->
+<script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
+<script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+
 
 </body>
 

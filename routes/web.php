@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegistController;
+use App\Http\Controllers\Auth\LoginAdminController;
 
 // Route untuk homepage
 Route::get('/', [VideoController::class, 'video']);
@@ -29,15 +30,28 @@ Route::get('/package2', function(){
 Route::get('/package3', function(){
     return view('layout.package3page');
 });
-Route::get('/admin', function(){
-    return view('admin.dashboard');
-});
 
 
-// Route untuk login
+
+// Route untuk login User
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Group untuk admin
+Route::middleware(['web'])->group(function () {
+    // Route untuk login Admin
+    Route::get('/loginAdmin', [LoginAdminController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/auth/loginAdmin', [LoginAdminController::class, 'login'])->name('admin.auth');
+
+    // Route untuk dashboard (dengan middleware auth agar hanya bisa diakses setelah login)
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/admin/dashboard', function () {
+            return view('admin.dashboard'); // ✅ Pastikan ini sesuai dengan lokasi file
+        })->name('admin.dashboard'); // ✅ Gunakan nama ini di redirect
+    });
+});
+
 
 // Route untuk upload video
 Route::get('/register', function () {
