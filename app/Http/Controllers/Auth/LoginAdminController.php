@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginAdminController extends Controller
 {
+    
     public function showLoginForm()
     {
         return view('admin.loginadmin');
@@ -21,12 +22,11 @@ class LoginAdminController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('admin.dashboard');
- // ✅ Pastikan ini benar
+            return redirect()->route('admin.dashboard')->with('success', 'Login berhasil!');
         }
 
         return back()->withErrors([
-            'email' => 'Salah kontol',
+            'email' => 'Email atau password salah.',
         ]);
     }
 
@@ -35,6 +35,6 @@ class LoginAdminController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('admin.login');
+        return redirect()->route('admin.login'); // ✅ Redirect ke halaman login setelah logout
     }
 }

@@ -10,7 +10,7 @@
     <meta name="author" content="">
    
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>KelolainAja - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     @vite('resources/css/app.css')
@@ -40,18 +40,8 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">KelolainAja</div>
             </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -329,20 +319,22 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <div class="dropdown dropdown-end">
-                                <label tabindex="0" class="btn bg-[#FF4654] text-white border-[#FF4654]">
-                                    {{ Auth::user()->name }}
-                                </label>
-                                <ul tabindex="0"
-                                    class="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52 mt-2">
-                                 
-                                    <li><a href="{{ route('dashboard') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a></li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                                        @csrf
-                                    </form>
-                                </ul>
-                            </div>
+    <label tabindex="0" class="btn bg-[#FF4654] text-white border-[#FF4654]">
+        {{ Auth::user()->name }}
+    </label>
+    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-52 mt-2">
+        <li>
+            <a href="{{ route('admin.dashboard') }}" 
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+            </a>
+        </li>
+        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="hidden">
+            @csrf
+        </form>
+    </ul>
+</div>
+
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">

@@ -16,7 +16,7 @@
         <div data-aos="fade-in-right">
            <img src="/img/Pola1.png" class="h-[40.1rem]">
         </div>
-        <form  data-aos="zoom-in-right" action="{{ route('admin.auth') }}" method="POST" class="w-96 flex flex-col justify-center items-center">
+        <form  data-aos="zoom-in-right" action="{{ route('admin.login.submit') }}"  method="POST" class="w-96 flex flex-col justify-center items-center">
             @csrf
             <h1 class="font-bold text-black text-2xl pb-8">Administrator</h1>
             <input type="email" name="email" class="w-full h-14 bg-red-100 border-none rounded-lg px-8 text-sm font-medium text-red-500 mb-5 placeholder-gray-500" placeholder="Email" required>
