@@ -26,6 +26,9 @@ Route::get('/package1', function(){
 Route::get('/package2', function(){
     return view('layout.package2page');
 });
+Route::get('/p', function(){
+    return view('admin.pemesanan');
+});
 
 // Route::get('/package3', function(){
 //     return view('admin.dashboard');
