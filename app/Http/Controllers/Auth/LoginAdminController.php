@@ -35,6 +35,6 @@ class LoginAdminController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('admin.login'); // ✅ Redirect ke halaman login setelah logout
+        return redirect()->route('admin.login');
     }
 }
