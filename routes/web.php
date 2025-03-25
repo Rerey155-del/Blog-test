@@ -17,7 +17,7 @@ Route::get('/upload', function () {
 
 // Route untuk register (pastikan nama file view benar)
 Route::get('/register', function () {
-    return view('layout.registration');
+    return view('auth.registration');
 })->name('register');
 
 Route::get('/package1', function(){
@@ -45,14 +45,15 @@ Route::post('/login/admin', [LoginAdminController::class, 'login'])->name('admin
 // Middleware untuk halaman admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', function () {
-        return view('admin.dashboard'); // ✅ Gunakan 'dashboard' karena filenya ada di views/
+        return view('admin.dashboard');
     })->name('admin.dashboard');
 
-    Route::get('/admin/tables', function(){
+    Route::get('/admin/tables', function () {
         return view('admin.pemesanan');
     })->name('admin.pemesanan');
+
     Route::get('/admin/users', [UserController::class, 'user'])->name('admin.pengguna');
-    // Logout admin
+
     Route::post('/logout/admin', [LoginAdminController::class, 'logout'])->name('admin.logout');
 });
 
