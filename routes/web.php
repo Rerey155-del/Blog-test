@@ -20,11 +20,11 @@ Route::get('/register', function () {
     return view('auth.registration');
 })->name('register');
 
-Route::get('/package1', function(){
+Route::get('/package1', function () {
     return view('layout.package1page');
 });
 
-Route::get('/package2', function(){
+Route::get('/package2', function () {
     return view('layout.package2page');
 });
 
