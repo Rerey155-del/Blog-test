@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegistController;
@@ -26,9 +27,7 @@ Route::get('/package1', function(){
 Route::get('/package2', function(){
     return view('layout.package2page');
 });
-Route::get('/p', function(){
-    return view('admin.pemesanan');
-});
+
 
 // Route::get('/package3', function(){
 //     return view('admin.dashboard');
@@ -49,6 +48,10 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.dashboard'); // ✅ Gunakan 'dashboard' karena filenya ada di views/
     })->name('admin.dashboard');
 
+    Route::get('/admin/tables', function(){
+        return view('admin.pemesanan');
+    })->name('admin.pemesanan');
+    Route::get('/admin/users', [UserController::class, 'user'])->name('admin.pengguna');
     // Logout admin
     Route::post('/logout/admin', [LoginAdminController::class, 'logout'])->name('admin.logout');
 });

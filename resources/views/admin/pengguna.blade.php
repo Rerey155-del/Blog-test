@@ -35,7 +35,6 @@
 
 
 
-
 </head>
 
 <body id="page-top">
@@ -190,52 +189,40 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Akun Pengguna</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse($users as $user)
+                                            <tr>
+                                                <td>{{ $user->name }}</td>
+                                                <td>{{ $user->email }}</td>
+                                                <td>******</td> <!-- Password disembunyikan -->
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                                <!-- Perbaikan colspan -->
+                                            </tr>
+                                        @endforelse
+                                    </tbody>
+                                </table>
 
-                    <!-- Content Row -->
-                    <div class="flex">
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-4">
-                            <div class="bg-white border-l-4 border-blue-500 shadow-lg rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-semibold text-blue-500 uppercase">Users</p>
-                                        <h2 class="text-2xl font-bold text-gray-800">{{ $totalUsers }}</h2>
-                                    </div>
-                                    <div class="text-gray-400">
-                                        <i class="fas fa-calendar fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-4">
-                            <div class="bg-white border-l-4 border-blue-500 shadow-lg rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-semibold text-blue-500 uppercase">Admins</p>
-                                        <h2 class="text-2xl font-bold text-gray-800">{{ $totalAdmins }}</h2>
-                                    </div>
-                                    <div class="text-gray-400">
-                                        <i class="fas fa-calendar fa-2x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="w-full sm:w-1/2 lg:w-1/4 px-4 mb-4">
-                            <div class="bg-white border-l-4 border-blue-500 shadow-lg rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-semibold text-blue-500 uppercase">Video</p>
-                                        <h2 class="text-2xl font-bold text-gray-800">{{ $totalVideos }}</h2>
-                                    </div>
-                                    <div class="text-gray-400">
-                                        <i class="fas fa-calendar fa-2x"></i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 
