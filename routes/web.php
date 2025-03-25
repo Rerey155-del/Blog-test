@@ -61,7 +61,7 @@ Route::middleware(['auth'])->group(function () {
 Route::post('/register', [RegistController::class, 'register'])->name('register.post');
 
 Route::get('/upload', function () {
-    return view('upload'); // Pastikan file `upload.blade.php` ada di folder `resources/views`
+    return view('upload');
 });
 
 Route::post('/upload', [VideoController::class, 'store'])->name('video.store');
