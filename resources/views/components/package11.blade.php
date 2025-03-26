@@ -1,4 +1,4 @@
-<div class="card w-96 bg-white shadow-2xl">
+<div class="card w-96 bg-white shadow-2xl border">
     <div class="card-body p-12">
         <h2 class="text-3xl font-bold text-[#FF4655]">Paket Normal</h2>
         <ul class="mt-6 flex flex-col gap-4 text-lg text-[#FF4655] list-disc list-inside mb-10">
