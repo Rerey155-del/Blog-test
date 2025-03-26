@@ -31,12 +31,15 @@
                     </button>
                 </div>
                 <div>
-                    <img src="/img/Avatar1.png"
-                        alt="Kelolainaja Illustration" class="w-[648px] h-[594px] object-contain">
+                    <img src="/img/Avatar1.png" alt="Kelolainaja Illustration"
+                        class="w-[648px] h-[594px] object-contain">
                 </div>
             </div>
         </main>
-        <div class="h-[40rem] w-full bg-[rgb(255,70,85)]  p-20">
+
+        {{-- ============ Layanan Kami ================== --}}
+
+        <div class="h-[45rem] w-full bg-[rgb(255,70,85)]  p-20">
             <div class="text-center #layanan text-white mb-8 flex flex-col items-center">
                 <h1 class="card-title text-2xl font-bold">Layanan Kami</h1>
                 <p class="text-lg">Bisnis Sukses Kelola Tanpa Stress</p>
@@ -70,14 +73,17 @@
                         <img src="/img/foto3.png" alt="Shoes" class="rounded-xl w-[21rem]" />
                     </figure>
                     <div class="card-body ">
-                        <h2 class="card-title text-black">Manajemen Media Sosial</h2>
-                        <p>Mengelola konten, jadwal posting, dan analisis performa media sosial untuk meningkatkan
-                            interaksi dan brand awareness bisnis Anda</p>
+                        <h2 class="card-title text-black">Manajemen E-commerce</h2>
+                        <p>Membantu optimasi produk, pembuatan konten, pengelolaan promosi, hingga analisis performa,
+                            agar bisnis kamu tumbuh lebih cepat dan efektif</p>
 
                     </div>
                 </div>
             </div>
         </div>
+
+        {{-- ========= Keunggulan Kami ====================  --}}
+
         <div class="container mx-auto grid grid-cols-2 p-20 justify-center items-center">
             <div><img src="/img/Avatar2.png" data-aos="zoom-in-right" alt=""
                     class="w-[30rem] h-[30rem] object-cover"></div>
@@ -126,57 +132,9 @@
                 </div>
             </div>
         </div>
-        <div class="w-full  bg-[#FF4654] p-14">
-            <h1 class="text-center text-2xl text-white font-bold mb-6">Pilihan portofolio yang telah bekerja sama dengan
-                Kami</h1>
-            <div class="container mx-auto">
-                <div class=" grid grid-cols-4 gap-8" data-aos="zoom-in-up">
-                    @foreach ($videos as $video)
-                        <div class="bg-white shadow-lg rounded-lg p-4">
-                            {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
-                            <video width="320" height="240" controls class="rounded-lg">
-                                <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="w-full container mx-auto bg-white pb-4">
-            <div class="text-center text-black text-lg pt-12">
-                <h2>Price List Package - Kelolainaja</h2>
-                <h1 class="font-bold">Paket Mana yang Sesuai dengan Kebutuhan Anda?</h1>
-            </div>
-            <div class=" grid grid-cols-3 gap-12 p-14">
-                {{-- cards --}}
-                <x-package1></x-package1>
-                <x-package2></x-package2>
-                <x-package3></x-package3>
-                
-            </div>
-            <div class="container mx-auto grid grid-cols-3 gap-4 mb-12 px-14">
-                <div class="flex justify-center">
-                    <button onclick="window.location.href='/package1'"
-                        class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg hover:bg-red-600 transition">
-                        Pesan Sekarang
-                    </button>
-                </div>
-                <div class="flex justify-center">
-                    <button onclick="window.location.href='/package2'"
-                        class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg   hover:bg-red-600 transition">
-                        Pesan Sekarang
-                    </button>
-                </div>
-                <div class="flex justify-center">
-                    <button onclick="window.location.href='/package3'"
-                        class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold shadow-lg hover:bg-red-600 transition">
-                        Pesan Sekarang
-                    </button>
-                </div>
-            </div>
 
-        </div>
+        {{-- ================== Alur pemesanan ============================ --}}
+
         <div class="bg-[#FF4655]">
             <div class="container mx-auto grid grid-cols-2 text-black p-20 gap-[12rem] justify-center  items-center">
                 <div>
@@ -224,6 +182,52 @@
                 </div>
             </div>
         </div>
+
+
+
+        {{-- Price List Package --}}
+        <div class="w-full container mx-auto bg-white pb-4">
+            <div class="text-center text-black text-lg pt-12">
+                <h2>Price List Package - Kelolainaja</h2>
+                <h1 class="font-bold ">Paket Mana yang Sesuai dengan Kebutuhan Anda?</h1>
+            </div>
+            <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
+            <div class=" grid grid-cols-3 gap-12 p-10">
+                {{-- cards --}}
+                <x-package1></x-package1>
+                <x-package2></x-package2>
+                <x-package3></x-package3>
+            </div>
+            <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
+            <div class=" grid grid-cols-3 gap-12 p-10">
+                {{-- cards --}}
+                <x-package11></x-package11>
+                <x-package22></x-package22>
+                <x-package33></x-package33>
+            </div>
+        </div>
+
+        {{-- Portofolio Kami --}}
+        <div class="w-full  bg-[#FF4654] p-14">
+            <h1 class="text-center text-2xl text-white font-bold mb-6">Pilihan portofolio yang telah bekerja sama
+                dengan
+                Kami</h1>
+            <div class="container mx-auto">
+                <div class=" grid grid-cols-4 gap-8" data-aos="zoom-in-up">
+                    @foreach ($videos as $video)
+                        <div class="bg-white shadow-lg rounded-lg p-4">
+                            {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
+                            <video width="320" height="240" controls class="rounded-lg">
+                                <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+
 
 
 

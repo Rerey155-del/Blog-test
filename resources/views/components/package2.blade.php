@@ -1,43 +1,25 @@
-<div class="card w-96 bg-[#FF4655] shadow-xl">
-    <div class="card-body">
-        <div class="flex justify-between">
-            <h2 class="text-3xl font-bold text-white">Package<br>Standart</h2>
-        </div>
-        <ul class="mt-4 flex flex-col text-white gap-4 text-md list-disc list-inside">
-            <li>
-
-                <span class="font-semibold text-xl">Essentials Pack</span> <span
-                    class="float-right font-semibold text-xl">(550rb)</span>
-                <ul class="ml-5 mt-1 text-md space-y-1">
-                    <li>Kalender Konten</li>
-                    <li>8 Feeds (Foto)</li>
-                    <li>3 Reels (Maks. 30 Detik)</li>
-                    <li>4 Stories (Foto)</li>
-                    <li>1 Platform Media Sosial (Opsional)</li>
-                </ul>
-            </li>
-            <li>
-                <span class="font-semibold text-xl">Boost Pack</span> <span
-                    class="float-right font-semibold text-xl">(999rb)</span>
-                <ul class="ml-5 mt-1 text-md space-y-1">
-                    <li>Kalender Konten</li>
-                    <li>14 Feeds (Foto)</li>
-                    <li>6 Reels (Maks. 30 Detik)</li>
-                    <li>4 Stories (Foto)</li>
-                    <li>2 Platform Media Sosial (Opsional)</li>
-                </ul>
-            </li>
-            <li>
-                <span class="font-semibold text-xl">Premium Pack</span> <span
-                    class="float-right font-semibold text-xl">(1.5jt)</span>
-                <ul class="ml-5 mt-1 text-md space-y-1">
-                    <li>Kalender Konten</li>
-                    <li>16 Feeds (Foto)</li>
-                    <li>8 Reels (Maks. 30 Detik)</li>
-                    <li>6 Stories (Foto)</li>
-                    <li>1 Platform Media Sosial (Opsional)</li>
-                </ul>
-            </li>
+<div class="card w-96 bg-[#FF4655] shadow-sm">
+    <div class="card-body p-12">
+        <h2 class="text-3xl font-bold text-white">Paket Silver</h2>
+        <ul class="mt-6 flex flex-col gap-4 text-lg text-white list-disc list-inside mb-10">
+            <li class="text-xl marker:text-xl marker:text-white">Kalender Konten</li>
+            <li class="text-xl marker:text-xl marker:text-white">14 Feeds (Foto)</li>
+            <li class="text-xl marker:text-xl marker:text-white">6 Reels (Maks.30 Detik)</li>
+            <li class="text-xl marker:text-xl marker:text-white">4 Stories</li>
+            <li class="text-xl marker:text-xl marker:text-white">2 Platform Medsos(Opsional)</li>
         </ul>
+        <div class="flex justify-center gap-x-4">
+            <h2  class="text-black font-bold text-2xl line-through decoration-white">1.1jt</h2>
+            <h2 class="text-white text-4xl font-bold">999rb</h2>
+        </div>
+        <div class="flex justify-center mt-6">
+            <button onclick="window.location.href='/package2page'"
+                class="bg-white text-[#FF4655] px-6 py-3 rounded-lg w-80 font-semibold hover:bg-red-600 hover:text-white transition">
+                Pesan Sekarang
+            </button>
+        </div>
+        <br>
+        <p class="text-white text-md text-center font-bold">2x Revisi/item | Add-on (Revisi) 10k</p>
     </div>
+
 </div>
