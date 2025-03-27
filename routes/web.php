@@ -29,7 +29,7 @@ Route::get('/package2page', function () {
 });
 
 
-Route::get('/package3page', function(){
+Route::get('/package3page', function () {
     return view('layout.package3page');
 });
 Route::get('/package11page', function () {
@@ -41,7 +41,7 @@ Route::get('/package22page', function () {
 });
 
 
-Route::get('/package33page', function(){
+Route::get('/package33page', function () {
     return view('layout.package33page');
 });
 
@@ -50,12 +50,16 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+
+
 // Halaman login admin
 Route::get('/login/admin', [LoginAdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/login/admin', [LoginAdminController::class, 'login'])->name('admin.login.submit');
 
-// Middleware untuk halaman admin
-Route::middleware(['auth'])->group(function () {
+// Middleware untuk halaman admin dengan guard 'admin'
+Route::middleware(['auth:admin'])->group(function () {
+
+
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
@@ -68,6 +72,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/logout/admin', [LoginAdminController::class, 'logout'])->name('admin.logout');
 });
+
 
 // Route untuk register
 Route::post('/register', [RegistController::class, 'register'])->name('register.post');

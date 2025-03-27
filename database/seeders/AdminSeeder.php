@@ -14,26 +14,26 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         Admin::firstOrCreate(
-            ['email' => 'admin@example.com'], // Cek apakah email sudah ada
+            ['email' => 'iniakunsaya123@outlook.com'], // Cek apakah email sudah ada
             [
-                'name' => 'Admin',
+                'name' => 'saya',
                 'password' => Hash::make('password123'),
             ]
         );
 
-        Admin::firstOrCreate(
-            ['email' => 'Reyhanganteng@gmail.com'], // Cek apakah email sudah ada
-            [
-                'name' => 'Reyhan',
-                'password' => Hash::make('Reyhanganteng@gmail.com'),
-            ]
-        );
-        Admin::firstOrCreate(
-            ['email' => 'Rerey@gmail.com'], // Cek apakah email sudah ada
-            [
-                'name' => 'Rerey',
-                'password' => Hash::make('Reyhanmaulana123'),
-            ]
-        );
+        // Admin::firstOrCreate(
+        //     ['email' => 'Reyhanganteng@gmail.com'], // Cek apakah email sudah ada
+        //     [
+        //         'name' => 'Reyhan',
+        //         'password' => Hash::make('Reyhanganteng@gmail.com'),
+        //     ]
+        // );
+        // Admin::firstOrCreate(
+        //     ['email' => 'Rerey@gmail.com'], // Cek apakah email sudah ada
+        //     [
+        //         'name' => 'Rerey',
+        //         'password' => Hash::make('Reyhanmaulana123'),
+        //     ]
+        // );
     }
 }
