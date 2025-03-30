@@ -14,56 +14,21 @@
 <body class="bg-white">
     <section class="grid justify-center p-24">
         <x-navbar></x-navbar>
-        <div class="grid grid-cols-2" data-aos="fade-up" >
+        <div class="grid grid-cols-2" data-aos="fade-up">
             <div class="flex flex-col items-center">
-                <x-package11></x-package11>
+                <x-package11 ></x-package11>
             </div>
-            <div class="grid grid-cols-2 p-4">
-                <!-- Bagian Foto -->
-                <div>
-                    <p class="font-semibold text-black  font-bold">Foto:</p>
-                    <div class="flex flex-col gap-2">
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="1-5 Foto" class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="6-10 Foto" class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="10+ Foto" class="btn bg-white w-[12rem]" />
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Bagian Video -->
-                <div>
-                    <p class="font-semibold text-black  font-bold">Video:</p>
-                    <div class="flex flex-col gap-2">
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="15-30 Detik" class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="60 Detik" class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" aria-label="90 Detik" class="btn bg-white w-[12rem]" />
-                        </label>
-                    </div>
-                </div>
-                <!-- Bagian Caption -->
-                <div class="mt-[-6rem]">
-                    <p class="font-semibold text-black font-bold">Caption:</p>
-                    <div class="flex flex-col gap-2">
-                        <label class="flex items-center gap-2 text-black">
-                            <input type="checkbox" aria-label="1-3 Posts" class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2 text-black">
-                            <input type="checkbox" aria-label="4-5 Posts " class="btn bg-white w-[12rem]" />
-                        </label>
-                        <label class="flex items-center gap-2 text-black ">
-                            <input type="checkbox" aria-label="5+ Post" class="btn bg-white w-[12rem]" />
-                        </label>
-                    </div>
+            <div class="p-4">
+                <h2 class="font-bold text-black text-2xl">Produk Dipesan :</h2>
+                <p class="text-black">{paket normal}</p>
+                <p class="text-[#FF4655]">{harga}</p>
+                <p>pesan :</p>
+                <input type="text" placeholder="Accent" class="input input-accent bg-white" />
+                <br>
+                <p class="font-bold text-black text-2xl">Metode Pembayaran : </p>
+                <div class="flex">
+                    <button class="btn btn-outline">Default</button>
+                    <button class="btn btn-outline">Default</button>
                 </div>
             </div>
         </div>
@@ -76,4 +41,5 @@
 <script>
     AOS.init();
 </script>
+
 </html>

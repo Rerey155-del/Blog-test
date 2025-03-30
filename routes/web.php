@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\PaketController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegistController;
 use App\Http\Controllers\Auth\LoginAdminController;
@@ -82,3 +83,5 @@ Route::get('/upload', function () {
 });
 
 Route::post('/upload', [VideoController::class, 'store'])->name('video.store');
+
+Route::get('/package1', [PaketController::class, 'showPackage1']);
