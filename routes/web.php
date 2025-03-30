@@ -84,4 +84,4 @@ Route::get('/upload', function () {
 
 Route::post('/upload', [VideoController::class, 'store'])->name('video.store');
 
-Route::get('/package1', [PaketController::class, 'showPackage1']);
+Route::get('/package', [PaketController::class, 'showPackage1']);

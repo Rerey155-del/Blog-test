@@ -1,5 +1,3 @@
-<script src="https://cdn.tailwindcss.com"></script>
-@vite('resources/css/app.css')
 <div class="card w-96 bg-[#FF4655] shadow-sm">
     <div class="card-body p-12">
         <h2 class="text-3xl font-bold text-white">{{ $package->name }}</h2>
