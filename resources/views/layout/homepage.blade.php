@@ -193,17 +193,11 @@
             </div>
             <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
             <div class=" grid grid-cols-3 gap-12 p-10">
-                {{-- cards --}}
-                <x-package1/>
-                <x-package2></x-package2>
-                <x-package3></x-package3>
+                <x-package_media_sosial/>
             </div>
             <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
             <div class=" grid grid-cols-3 gap-12 p-10">
-                {{-- cards --}}
-                <x-package11></x-package11>
-                <x-package22></x-package22>
-                <x-package33></x-package33>
+                <x-package_desain/>
             </div>
         </div>
 
