@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Auth\UserController;
@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\LoginAdminController;
 
 // Route untuk homepage
 Route::get('/', [VideoController::class, 'video']);
-Route::get('/', [HomeController::class, 'index']);
+
 
 // Route untuk form upload video
 Route::get('/upload', function () {

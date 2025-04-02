@@ -193,11 +193,11 @@
             </div>
             <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
             <div>
-                <x-package_media_sosial/>
+                {{-- <x-package_media_sosial/> --}}
             </div>
             <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
             <div>
-                <x-package_desain/>
+                {{-- <x-package_desain/> --}}
             </div>
         </div>
 
