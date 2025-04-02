@@ -192,11 +192,11 @@
                 <h1 class="font-bold ">Paket Mana yang Sesuai dengan Kebutuhan Anda?</h1>
             </div>
             <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
-            <div class=" grid grid-cols-3 gap-12 p-10">
+            <div>
                 <x-package_media_sosial/>
             </div>
             <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
-            <div class=" grid grid-cols-3 gap-12 p-10">
+            <div>
                 <x-package_desain/>
             </div>
         </div>

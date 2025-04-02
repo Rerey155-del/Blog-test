@@ -1,3 +1,4 @@
+
 @vite('resources/css/app.css')
 <div class="container mx-auto px-4">
     <h2 class="text-center text-3xl font-bold mb-6">Paket Layanan Media Sosial</h2>
