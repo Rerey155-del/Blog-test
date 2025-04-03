@@ -195,7 +195,7 @@
             <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
             <br>
             <div>
-                <div class="container mx-auto p-10">
+                <div class="container mx-auto p-10 mt-[-2rem]">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                         @foreach( $mediaSosialPackages as $package)
                         <div class="card w-96 bg-[#FF4655] shadow-2xl">
@@ -211,7 +211,7 @@
                                     <h2 class="text-white text-4xl font-bold">{{ $package->price }}</h2>
                                 </div>
                                 <div class="flex justify-center mt-6">
-                                    <button onclick="window.location.href='/package/{{ $package->id }}'"
+                                    <button onclick="window.location.href='{{ route('deskripsiPaket', $package->id)  }}}'"
                                         class="bg-white text-[#FF4655] px-6 py-3 rounded-lg w-80 font-semibold hover:bg-red-600 hover:text-white transition">
                                         Pesan Sekarang
                                     </button>

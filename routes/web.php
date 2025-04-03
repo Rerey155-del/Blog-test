@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Package;
+
+
 use Illuminate\Support\Facades\Route;
-
-
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\Auth\LoginController;
@@ -11,9 +12,6 @@ use App\Http\Controllers\Auth\LoginAdminController;
 
 // Route untuk homepage
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-
-// Tambahkan route lain untuk halaman kategori paket spesifik jika diperlukan
-Route::get('/paket/{category}', [App\Http\Controllers\PaketController::class, 'showPackagesByCategory']);
 
 
 // Route untuk form upload video
@@ -65,4 +63,11 @@ Route::get('/upload', function () {
 });
 
 Route::post('/upload', [VideoController::class, 'store'])->name('video.store');
+
+
+// rute untuk menampilkan deskripsi isi data
+Route::get('/package/{id}', function ($id) {
+    $paket = Package::findOrFail($id);
+    return view('layout.packageDescription', compact('paket'));
+})->name('deskripsiPaket');
 

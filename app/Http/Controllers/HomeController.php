@@ -21,4 +21,5 @@ class HomeController extends Controller
         // Pastikan semua variabel di-compact untuk dikirim ke view
         return view('layout.homepage', compact( 'videos','mediaSosialPackages', 'desainPackages'));
     }
+    
 }

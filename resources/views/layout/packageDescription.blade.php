@@ -14,19 +14,46 @@
 <body class="bg-white">
     <section class="grid justify-center p-24">
         <x-navbar></x-navbar>
-        <div class="grid grid-cols-2" data-aos="fade-up" >
+        <div class="grid grid-cols-2" data-aos="fade-up">
             <div class="flex flex-col items-center">
-                <x-package1></x-package1>
+                <div>
+                    <div class="container mx-auto p-10">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+                           
+                                <div class="card w-96 bg-[#FF4655] shadow-2xl">
+                                    <div class="card-body p-12">
+                                        <h2 class="text-3xl font-bold text-white">{{ $paket->name }}</h2>
+                                        <ul
+                                            class="mt-6 flex flex-col gap-4 text-lg text-white list-disc list-inside mb-10">
+                                            @foreach (explode(',', $paket->description) as $desc)
+                                                <li class="text-xl marker:text-xl marker:text-white">{{ trim($desc) }}
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                        <div class="flex justify-center gap-x-4">
+                                            <h2 class="text-black font-bold text-2xl line-through decoration-white">
+                                                {{ $paket->price }}</h2>
+                                            <h2 class="text-white text-4xl font-bold">{{ $paket->price }}</h2>
+                                        </div>
+                                        <br>
+                                        <p class="text-white text-md text-center font-bold">1x Revisi/item | Add-on
+                                            (Revisi) 10k</p>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
-                        <div class="p-4">
+            <div class="p-4">
                 <h2 class="font-bold text-black text-2xl">Produk Dipesan :</h2>
-                <p class="text-black">{paket normal}</p>
-                <p class="text-[#FF4655]">{harga}</p>
+                <p class="text-black">{{ $paket->name }}</p>
+                <p class="text-[#FF4655]">{{ $paket->price }}</p>
                 <p>pesan :</p>
                 <input type="text" placeholder="Accent" class="input input-accent bg-white" />
                 <br>
                 <p class="font-bold text-black text-2xl">Metode Pembayaran : </p>
-                <div class="flex">
+                <div class="flex space-x-8">
                     <button class="btn btn-outline">Default</button>
                     <button class="btn btn-outline">Default</button>
                 </div>
@@ -41,4 +68,5 @@
 <script>
     AOS.init();
 </script>
+
 </html>
