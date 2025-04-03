@@ -191,13 +191,73 @@
                 <h2>Price List Package - Kelolainaja</h2>
                 <h1 class="font-bold ">Paket Mana yang Sesuai dengan Kebutuhan Anda?</h1>
             </div>
+            {{-- ======== paket medsos ================= --}}
             <h2 class="text-start text-black text-xl pt-8 px-14 text-lg font-bold">Paket Layanan Media Sosial</h2>
+            <br>
             <div>
-                {{-- <x-package_media_sosial/> --}}
+                <div class="container mx-auto p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+                        @foreach( $mediaSosialPackages as $package)
+                        <div class="card w-96 bg-[#FF4655] shadow-2xl">
+                            <div class="card-body p-12">
+                                <h2 class="text-3xl font-bold text-white">{{ $package->name }}</h2>
+                                <ul class="mt-6 flex flex-col gap-4 text-lg text-white list-disc list-inside mb-10">
+                                    @foreach (explode(',', $package->description) as $desc)
+                                        <li class="text-xl marker:text-xl marker:text-white">{{ trim($desc) }}</li>
+                                    @endforeach
+                                </ul>
+                                <div class="flex justify-center gap-x-4">
+                                    <h2 class="text-black font-bold text-2xl line-through decoration-white">{{ $package->price}}</h2>
+                                    <h2 class="text-white text-4xl font-bold">{{ $package->price }}</h2>
+                                </div>
+                                <div class="flex justify-center mt-6">
+                                    <button onclick="window.location.href='/package/{{ $package->id }}'"
+                                        class="bg-white text-[#FF4655] px-6 py-3 rounded-lg w-80 font-semibold hover:bg-red-600 hover:text-white transition">
+                                        Pesan Sekarang
+                                    </button>
+                                </div>
+                                <br>
+                                <p class="text-white text-md text-center font-bold">1x Revisi/item | Add-on (Revisi) 10k</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
+
+            {{-- ============ paket desain =================== --}}
+
             <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
+            <br>
             <div>
-                {{-- <x-package_desain/> --}}
+                <div class="container mx-auto p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        @foreach($desainPackages as $package)
+                        <div class="card w-96 bg-white shadow-2xl ">
+                            <div class="card-body p-12">
+                                <h2 class="text-3xl font-bold text-[#FF4655]">{{ $package->name }}</h2>
+                                <ul class="mt-6 flex flex-col gap-4 text-lg text-[#FF4655] list-disc list-inside mb-10">
+                                    @foreach (explode(',', $package->description) as $desc)
+                                        <li class="text-xl marker:text-xl marker:text-[#FF4655]">{{ trim($desc) }}</li>
+                                    @endforeach
+                                </ul>
+                                <div class="flex justify-center gap-x-4">
+                                    <h2 class="text-black font-bold text-2xl line-through decoration-white">{{ $package->price}}</h2>
+                                    <h2 class="text-[#FF4655] text-4xl font-bold">{{ $package->price }}</h2>
+                                </div>
+                                <div class="flex justify-center mt-6">
+                                    <button onclick="window.location.href='/package/{{ $package->id }}'"
+                                        class="bg-[#FF4655] text-white px-6 py-3 rounded-lg w-80 font-semibold hover:bg-red-600 hover:text-white transition">
+                                        Pesan Sekarang
+                                    </button>
+                                </div>
+                                <br>
+                                <p class="text-white text-md text-center font-bold">1x Revisi/item | Add-on (Revisi) 10k</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -210,7 +270,7 @@
                 <div class=" grid grid-cols-4 gap-8" data-aos="zoom-in-up">
                     @foreach ($videos as $video)
                         <div class="bg-white shadow-lg rounded-lg p-4">
-                            {{-- <h3 class="font-semibold text-lg">{{ $video->title }}</h3> --}}
+                            
                             <video width="320" height="240" controls class="rounded-lg">
                                 <source src="{{ asset('storage/' . $video->video_path) }}" type="video/mp4">
                                 Your browser does not support the video tag.
