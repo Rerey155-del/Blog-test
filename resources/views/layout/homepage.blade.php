@@ -228,7 +228,6 @@
             {{-- ============ paket desain =================== --}}
 
             <h2 class="text-start text-black text-xl pt-6 px-14 text-lg font-bold">Paket Layanan Desain</h2>
-            <br>
             <div>
                 <div class="container mx-auto p-10">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
