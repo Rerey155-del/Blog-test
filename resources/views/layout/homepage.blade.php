@@ -242,7 +242,7 @@
                                     @endforeach
                                 </ul>
                                 <div class="flex justify-center gap-x-4">
-                                    <h2 class="text-black font-bold text-2xl line-through decoration-white">{{ $package->price}}</h2>
+                                    <h2 class="text-black font-bold text-2xl line-through decoration-[#FF4655]s">{{ $package->price}}</h2>
                                     <h2 class="text-[#FF4655] text-4xl font-bold">{{ $package->price }}</h2>
                                 </div>
                                 <div class="flex justify-center mt-6">
@@ -252,7 +252,7 @@
                                     </button>
                                 </div>
                                 <br>
-                                <p class="text-white text-md text-center font-bold">1x Revisi/item | Add-on (Revisi) 10k</p>
+                                <p class="text-[#FF4655] text-md text-center font-bold">1x Revisi/item | Add-on (Revisi) 10k</p>
                             </div>
                         </div>
                         @endforeach
